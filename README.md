@@ -16,7 +16,6 @@ This repository contains a protocol-level CLI designed to interact with a Model 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/chrishayuk/mcp-cli
 cd mcp-cli
 ```
 
@@ -32,11 +31,19 @@ pip install uv
 uv sync --reinstall
 ```
 
+4. Server config updates:
+update the paths to mcp sevrers of synthetic-bee-mcp based on your system directory paths
+
 ## Usage
 To start the client and interact with the SQLite server, run the following command:
 
 ```bash
 uv run main.py --server sqlite
+```
+
+or 
+```bash
+uv run main.py --server outlook-python
 ```
 
 ### Command-line Arguments

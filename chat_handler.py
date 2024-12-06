@@ -20,7 +20,10 @@ async def handle_chat_mode(read_stream, write_stream, provider="openai",model="g
         openai_tools = convert_to_openai_tools(tools)
 
         # Initialize the LLM client
-        client = LLMClient(provider=provider,model=model)
+        client = LLMClient(
+            # provider=provider,
+            # model=model
+            )
 
         # setup the conversation history
         conversation_history = [{"role": "system", "content": system_prompt}]

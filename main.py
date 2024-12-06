@@ -45,7 +45,7 @@ async def handle_command(command: str, read_stream, write_stream):
 
             arguments_str = input("Enter tool arguments as JSON (e.g., {'key': 'value'}): ").strip()
             try:
-                arguments = eval(arguments_str)  # Convert string to dict
+                arguments = eval(arguments_str)  
             except Exception as e:
                 print(f"Invalid arguments format: {e}")
                 return True
@@ -75,7 +75,9 @@ async def handle_command(command: str, read_stream, write_stream):
             print(f"\nEntering chat mode using provider '{provider}' and model '{model}'...")
 
             # handle chat mode
-            await handle_chat_mode(read_stream, write_stream, provider,model)
+            await handle_chat_mode(read_stream, write_stream, 
+                                #    provider,
+                                   model)
         elif command in ["quit", "exit"]:
             # exit
             print("\nGoodbye!")
